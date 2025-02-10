@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #6f7f6f;
+}
+.envelope {
+  position: relative;
+  width: 90%;
+  max-width:18rem;
+  height: 400px;
+  background-color: #5a6b5a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.triangulo {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 200px solid white;
+  transform: translateX(-50%);
+}
+.flores {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  transform: translateX(-50%);
+}
+.iniciais {
+  position: absolute;
+  top: -8rem;
+  transform: translateX(-50%);
+  font-size: 40px;
+  font-family: serif;
+  color: #3b4b3b;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.iniciais span{
+  font-family: "Lora", serif;
+  display: inline-block;
+}
+
+.iniciais .menor{
+  font-size: 14px;
+  padding-top: 1.5rem;
+}
+
+.selo-link{
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.selo {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px; /* Defina um tamanho fixo para largura e altura */
+  height: 54px; /* Largura e altura devem ser iguais para o selo ficar arredondado */
+  border-radius: 50%; /* 100% arredondado = 50% para criar um círculo */
+  background-color: #5a6447; /* Cor de fundo opcional */
+  justify-content: center;
+}
+.selo .img {
+  width: 68px;
+  height: 68px;
+  margin-top: .8rem;
+}
+
+.frase{
+  position: absolute;
+  top: 17rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 80%;
+}
+
+.frase h3 {
+  font-family: "Lora", serif;
+  font-size: .8rem;
+  color: #F5F5DC;
+}
+
+.frase p {
+  font-family: "Lora", serif;
+  margin-top: .5rem;
+  font-size: 0.5rem;
+  color: #FFFFFF; /* Ou outra cor que prefira */
+}
+

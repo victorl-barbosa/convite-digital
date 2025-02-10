@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255)
+}
+
+.banner{
+  width: 100%;
+  height: 25rem;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(255, 255, 255, 1)
+    ),
+    url("../photos/costas.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.geral{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+}
+
+.frases{
+  font-family: "Dancing Script", serif;
+  margin-left: 1rem; 
+}
+
+.frases h1{
+  font-size: 3rem;
+}
+
+.frases h1 span{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.frases h3{
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: .9rem;
+  margin-top: 2.5rem;
+}
+
+.data{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1.5rem;
+  font-family: "Lora", serif;
+  font-weight: 600;
+}
+
+.data .dia{
+  padding-right: 1.2rem;
+  border-right: 1px solid black;
+}
+
+.icons{
+  font-family: "Lora", serif;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  margin: 1.3rem 0 1rem 0;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-container i{
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.icon-container a{
+  text-decoration: none;
+  color: black;
+  font-size: .8rem;
+  background: #2d492bdb;
+  padding: .5rem;
+  border-radius: 10px;
+
+}

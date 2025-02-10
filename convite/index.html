@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casamento Adri & Vi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <audio id="musica" loop>
+      <source
+        src="../envelope/I Wanna Be Yours (Violin) (mp3cut.net).mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <div class="banner"></div>
+    <div class="geral">
+      <div class="frases">
+        <h1>Adrielle <br /><span>&</span>Victor</h1>
+        <h3>
+          Com o coração cheio de amor e gratidão, convidamos você para celebrar
+          nosso casamento. Junte-se a nós neste momento único e especial, onde
+          começamos juntos uma nova história de amor.
+        </h3>
+      </div>
+
+      <div class="data">
+        <p class="dia">SÁBADO</p>
+        <p>13.SETEMBRO.2025</p>
+      </div>
+
+      <div class="icons">
+        <div class="icon-container">
+          <i class="fa-solid fa-location-dot"></i>
+          <a
+            href="https://goo.gl/maps/Wi4AuRLYNpfnt75o6"
+            target="_blank"
+            class="local"
+          >
+            Local
+          </a>
+        </div>
+        <div class="icon-container">
+          <i class="fa-solid fa-check"></i>
+          <a
+            href="https://api.whatsapp.com/send?phone=5591989741011&text=Oi,%20Adri%20e%20Vi!%0AFico%20super%20feliz%20em%20confirmar%20minha%20presen%C3%A7a%20no%20casamento%20de%20voc%C3%AAs!%0ASer%C3%A1%20um%20prazer%20celebrar%20esse%20momento%20t%C3%A3o%20especial.%0AAt%C3%A9%20l%C3%A1"
+            target="_blank"
+            class="confirmar"
+          >
+            Confirmação <br />de presença
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function() {
+          const musica = document.getElementById('musica');
+          const tempoSalvo = localStorage.getItem('tempoMusica');
+
+          if (tempoSalvo) {
+              musica.currentTime = parseFloat(tempoSalvo);
+          }
+
+          musica.play().catch(error => console.log("Erro ao continuar a música:", error));
+      };
+  </script>
+  </body>
+</html>
