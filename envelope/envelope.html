@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casamento Vi & Adri</title>
+    <title>Casamento Adri & Vi</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,10 +15,6 @@
     <link rel="stylesheet" href="envelope.css" />
   </head>
   <body>
-    <audio id="musica" autoplay loop>
-      <source src="./I Wanna Be Yours (Violin) (mp3cut.net).mp3" type="audio/mpeg" />
-    </audio>
-
     <div class="envelope">
       <div class="triangulo">
         <img src="flores.png" alt="Flores" class="flores" />
@@ -29,7 +25,7 @@
         </div>
       </div>
 
-      <a href="#" class="selo-link" onclick="iniciarMusicaEIrParaConvite(event)">
+      <a href="../convite/index.html" class="selo-link" >
         <div class="selo">
           <img
             src="./Logo Casamento recortado.png"
@@ -47,27 +43,5 @@
         <p>ISAÍAS 41:20</p>
       </div>
     </div>
-
-    <script>
-      function iniciarMusicaEIrParaConvite(event) {
-          event.preventDefault(); // Impede o redirecionamento imediato
-          const musica = document.getElementById('musica');
-
-          musica.volume = 0.1;
-
-          // Tenta iniciar a música antes de mudar de página
-          musica.play().then(() => {
-              localStorage.setItem('tempoMusica', musica.currentTime);
-
-              // Pequeno atraso para garantir que a música comece antes do redirecionamento
-              setTimeout(() => {
-                  window.location.href = "../convite/index.html";
-              }, 500);
-          }).catch(error => {
-              console.log("Erro ao iniciar a música:", error);
-              window.location.href = "../convite/index.html"; // Se falhar, redireciona mesmo assim
-          });
-      }
-  </script>
   </body>
 </html>

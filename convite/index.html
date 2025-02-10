@@ -23,15 +23,23 @@
     />
   </head>
   <body>
-    <audio id="musica" loop>
-      <source
-        src="../envelope/I Wanna Be Yours (Violin) (mp3cut.net).mp3"
-        type="audio/mpeg"
-      />
-    </audio>
-
     <div class="banner"></div>
     <div class="geral">
+            <!-- Botão para iniciar a música -->
+      <div class="botao-musica">
+        <i class="fa-solid fa-music" onclick="iniciarMusica()"></i>
+        <span>Clica Aqui</span>
+      </div>
+
+            <!-- Música -->
+      <audio id="musica" preload="auto">
+        <source
+          src="../envelope/I Wanna Be Yours (Violin) (mp3cut.net).mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+
+
       <div class="frases">
         <h1>Adrielle <br /><span>&</span>Victor</h1>
         <h3>
@@ -70,17 +78,14 @@
       </div>
     </div>
 
+    
+
     <script>
-      window.onload = function() {
-          const musica = document.getElementById('musica');
-          const tempoSalvo = localStorage.getItem('tempoMusica');
-
-          if (tempoSalvo) {
-              musica.currentTime = parseFloat(tempoSalvo);
-          }
-
-          musica.play().catch(error => console.log("Erro ao continuar a música:", error));
-      };
-  </script>
+      // Função para iniciar a música ao clicar
+      function iniciarMusica() {
+        const musica = document.getElementById('musica');
+        musica.play(); // Toca a música
+      }
+    </script>
   </body>
 </html>

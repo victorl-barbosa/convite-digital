@@ -16,6 +16,7 @@
     url("../photos/costas.jpeg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .geral{
@@ -84,10 +85,38 @@
 
 .icon-container a{
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: .8rem;
   background: #2d492bdb;
   padding: .5rem;
   border-radius: 10px;
 
+}
+
+.botao-musica {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 30px;
+  color: #000000c7; /* Cor do ícone */
+  cursor: pointer;
+  z-index: 1000;
+  background: none;
+  border: 2px solid #000000c7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.botao-musica i {
+  font-size: 1rem; /* Tamanho maior para o ícone */
+  background: none;
+}
+
+.botao-musica span{
+  background: none;
+  font-size: 1rem;
+  font-weight: bold;
 }
